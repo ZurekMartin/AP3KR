@@ -1,10 +1,10 @@
-# Library imports
+# Libraries import
 import unicodedata
 import math
 import tkinter as tk
 from tkinter import *
 
-# Application imports
+# Application import
 root = tk.Tk()
 root.resizable(False, False)
 root.title("Affine Cipher")

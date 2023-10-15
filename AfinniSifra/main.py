@@ -38,7 +38,6 @@ def encrypt(plain_text, key_a, key_b):
             cipher_index = (key_a * character_index + key_b) % alphabet_length
             cipher_text += alphabet[cipher_index]
         cipher_text = ' '.join([cipher_text[i:i + 5] for i in range(0, len(cipher_text), 5)])
-        # cipher_text = cipher_text.upper()
         textbox3.delete(0, END)
         textbox3.insert(0, cipher_text)
 

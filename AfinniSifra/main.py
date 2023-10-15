@@ -4,7 +4,7 @@ import math
 import tkinter as tk
 from tkinter import *
 
-# Application import
+# Application settings
 root = tk.Tk()
 root.resizable(False, False)
 root.title("Affine Cipher")

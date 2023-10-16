@@ -10,10 +10,10 @@ root.resizable(False, False)
 root.title("Affine Cipher")
 
 # Defining alphabet and variable
-lower_cased = list(map(chr, range(ord('a'), ord('z') + 1)))
-upper_cased = list(map(chr, range(ord('A'), ord('Z') + 1)))
+lower_case = list(map(chr, range(ord('a'), ord('z') + 1)))
+upper_case = list(map(chr, range(ord('A'), ord('Z') + 1)))
 numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
-alphabet = lower_cased + upper_cased + numbers
+alphabet = lower_case + upper_case + numbers
 alphabet_length = len(alphabet)
 
 

@@ -111,86 +111,86 @@ def characters_coresponding_to_index(index):
         textbox7.insert(0, plain_character)
 
 
-# EncryptPlainText
+# Encrypt plain text
 label1 = tk.Label(root, text="Text to encrypt")
 label1.grid(row=1, column=0)
 textbox1 = tk.Entry(root)
 textbox1.grid(row=2, column=0)
 
-# FilteredText
+# Filtered text
 label2 = tk.Label(root, text="Filtered text")
 label2.grid(row=3, column=0)
 textbox2 = tk.Entry(root)
 textbox2.grid(row=4, column=0)
 
-# CipherText
+# Cipher text
 label3 = tk.Label(root, text="Cipher text")
 label3.grid(row=5, column=0)
 textbox3 = tk.Entry(root)
 textbox3.grid(row=6, column=0)
 
-# EncryptButton
+# Encrypt button
 button1 = tk.Button(root, text="Encrypt", command=lambda: encrypt(
     textbox10.get() if len(textbox10.get()) > len(textbox1.get()) else textbox1.get(), int(textbox4.get()),
     int(textbox5.get())))
 button1.grid(row=7, column=0)
 
-# KeyA
+# Key a
 label4 = tk.Label(root, text="Key A")
 label4.grid(row=0, column=1)
 textbox4 = tk.Entry(root)
 textbox4.grid(row=1, column=1)
 
-# KeyB
+# Key b
 label5 = tk.Label(root, text="Key B")
 label5.grid(row=0, column=2)
 textbox5 = tk.Entry(root)
 textbox5.grid(row=1, column=2)
 
-# IndexSlider
+# Index slider
 slider1 = tk.Scale(root, from_=0, to=alphabet_length - 1, orient="horizontal")
 slider1.grid(row=3, column=1, columnspan=2)
 slider1.config(command=characters_coresponding_to_index)
 
-# CipherIndex
+# Cipher index
 label6 = tk.Label(root, text="Encrypted character")
 label6.grid(row=5, column=1)
 textbox6 = tk.Entry(root)
 textbox6.grid(row=6, column=1)
 
-# CharacterIndex
+# Character index
 label7 = tk.Label(root, text="Default character")
 label7.grid(row=5, column=2)
 textbox7 = tk.Entry(root)
 textbox7.grid(row=6, column=2)
 
-# ClearTextboxesButton
+# Clear textboxes button
 button2 = tk.Button(root, text="Delete", command=lambda: clear_textboxes())
 button2.grid(row=7, column=1)
 
-# ClearAllTextboxesButton
+# Clear all textboxes button
 button3 = tk.Button(root, text="Delete all", command=lambda: clear_all_textboxes())
 button3.grid(row=7, column=2)
 
-# DecryptCipherText
+# Decrypt cipher text
 label8 = tk.Label(root, text="Text to decrypt")
 label8.grid(row=1, column=4)
 textbox8 = tk.Entry(root)
 textbox8.grid(row=2, column=4)
 
-# UnfilteredText
+# Unfiltered text
 label9 = tk.Label(root, text="Unfiltered text")
 label9.grid(row=3, column=4)
 textbox9 = tk.Entry(root)
 textbox9.grid(row=4, column=4)
 
-# PlaintText
+# Plain text
 label10 = tk.Label(root, text="Plain text")
 label10.grid(row=5, column=4)
 textbox10 = tk.Entry(root)
 textbox10.grid(row=6, column=4)
 
-# DecryptButton
+# Decrypt button
 button4 = tk.Button(root, text="Decrypt", command=lambda: decrypt(
     textbox3.get() if len(textbox3.get()) > len(textbox8.get()) else textbox8.get(), int(textbox4.get()),
     int(textbox5.get())))

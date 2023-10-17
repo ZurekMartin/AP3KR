@@ -1,6 +1,6 @@
 # AP3KR
 ## Affine cipher
-Enhanced affine cipher with a simple GUI
+Affine cipher with a simple GUI
 
 ### Functionality
 - GUI

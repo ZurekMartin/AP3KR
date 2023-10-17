@@ -20,7 +20,7 @@ Enhanced playfair cipher with a simple GUI
 - supported languages: CZ, EN
 - supports user-specified Key value
 - simplified text entry
-- table sizes: Playfair cipher (5x5), Enhanced Playfair cipher (8x8)
+- table sizes: Playfair cipher (5x5), Enhanced playfair cipher (8x8)
 - supports input text with lowercase characters, uppercase characters and numbers
-- table generator with inserted key value
+- table generator with inserted Key value
 - formated output

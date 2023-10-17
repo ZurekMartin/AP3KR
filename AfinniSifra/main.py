@@ -64,8 +64,8 @@ def decrypt(cipher_text, key_a, key_b):
         textbox10.insert(0, plain_text)
 
 
-# Function for clearing textboxes
-def clear_textboxes():
+# Clear button function
+def clear_button():
     textbox1.delete(0, END)
     textbox2.delete(0, END)
     textbox3.delete(0, END)
@@ -74,8 +74,8 @@ def clear_textboxes():
     textbox10.delete(0, END)
 
 
-# Function for clearing textboxes, inserting default values into key A and B and resetting slider
-def clear_all_textboxes():
+# Clear all button function
+def clear_all_button():
     textbox1.delete(0, END)
     textbox2.delete(0, END)
     textbox3.delete(0, END)
@@ -91,8 +91,8 @@ def clear_all_textboxes():
     textbox10.delete(0, END)
 
 
-# Function for showing characters corresponding to index
-def characters_coresponding_to_index(index):
+# Show characters coresponding to index function
+def show_characters_coresponding_to_index(index):
     if int(textbox4.get()) == alphabet_length or math.gcd(int(textbox4.get()), int(textbox5.get())) != 1 or int(
             textbox4.get()) % 2 == 0 or int(textbox4.get()) < 1 or int(textbox5.get()) < 1:
         error = "Change value of Key A!"
@@ -150,7 +150,7 @@ textbox5.grid(row=1, column=2)
 # Index slider
 slider1 = tk.Scale(root, from_=0, to=alphabet_length - 1, orient="horizontal")
 slider1.grid(row=3, column=1, columnspan=2)
-slider1.config(command=characters_coresponding_to_index)
+slider1.config(command=show_characters_coresponding_to_index)
 
 # Cipher index
 label6 = tk.Label(root, text="Encrypted character")
@@ -164,12 +164,12 @@ label7.grid(row=5, column=2)
 textbox7 = tk.Entry(root)
 textbox7.grid(row=6, column=2)
 
-# Clear textboxes button
-button2 = tk.Button(root, text="Delete", command=lambda: clear_textboxes())
+# Clear button
+button2 = tk.Button(root, text="Clear", command=lambda: clear_button())
 button2.grid(row=7, column=1)
 
-# Clear all textboxes button
-button3 = tk.Button(root, text="Delete all", command=lambda: clear_all_textboxes())
+# Clear all button
+button3 = tk.Button(root, text="Clear all", command=lambda: clear_all_button())
 button3.grid(row=7, column=2)
 
 # Decrypt cipher text

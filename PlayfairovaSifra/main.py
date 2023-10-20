@@ -17,10 +17,10 @@ class App(ctk.CTk):
         # Defining alphabets
         lower_case = list(map(chr, range(ord('a'), ord('z') + 1)))
         upper_case = list(map(chr, range(ord('A'), ord('Z') + 1)))
-        numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+        digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
         alphabet_25_cz = [chr(i) for i in range(ord('A'), ord('Z') + 1) if chr(i) != 'W']
         alphabet_25_en = [chr(i) for i in range(ord('A'), ord('Z') + 1) if chr(i) != 'J']
-        alphabet_64 = lower_case + upper_case + numbers + ['.'] + ['?']
+        alphabet_64 = lower_case + upper_case + digits + ['.'] + ['?']
 
         # Encrypt function for 25 characters
         def encrypt_25(plain_text, key, alphabet):

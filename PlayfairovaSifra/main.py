@@ -27,7 +27,7 @@ class App(ctk.CTk):
             cipher_text = ""
             self.textbox1.delete(0, "end")
             self.textbox1.insert(0, plain_text)
-            filtered_plain_text = string_filter_25(plain_text, alphabet)
+            filtered_plain_text = plain_text_filter_25(plain_text, alphabet)
             diagraphs = [filtered_plain_text[i:i + 2] for i in range(0, len(filtered_plain_text), 2)]
             self.textbox2.delete(0, "end")
             self.textbox2.insert(0, diagraphs)
@@ -87,29 +87,29 @@ class App(ctk.CTk):
             self.textbox7.insert(0, plain_text)
 
         # String filtering function for 25 characters
-        def string_filter_25(string, alphabet):
-            string = string.replace("0", "XZEX")
-            string = string.replace("1", "XONX")
-            string = string.replace("2", "XTVX")
-            string = string.replace("3", "XTHX")
-            string = string.replace("4", "XFOX")
-            string = string.replace("5", "XFIX")
-            string = string.replace("6", "XSIX")
-            string = string.replace("7", "XSEX")
-            string = string.replace("8", "XEIX")
-            string = string.replace("9", "XNIX")
-            unfiltered_string = string.upper()
-            semifiltered_string = ''.join(
-                c for c in unicodedata.normalize('NFD', unfiltered_string) if unicodedata.category(c) != 'Mn')
-            filtered_string = ''.join(e for e in semifiltered_string if e.isalpha() or e == ' ')
-            filtered_string = filtered_string.replace(" ", "XSPACEX")
-            if len(filtered_string) % 2 == 1:
-                filtered_string += "Q"
+        def plain_text_filter_25(plain_text, alphabet):
+            plain_text = plain_text.replace("0", "XZEX")
+            plain_text = plain_text.replace("1", "XONX")
+            plain_text = plain_text.replace("2", "XTVX")
+            plain_text = plain_text.replace("3", "XTHX")
+            plain_text = plain_text.replace("4", "XFOX")
+            plain_text = plain_text.replace("5", "XFIX")
+            plain_text = plain_text.replace("6", "XSIX")
+            plain_text = plain_text.replace("7", "XSEX")
+            plain_text = plain_text.replace("8", "XEIX")
+            plain_text = plain_text.replace("9", "XNIX")
+            unfiltered_plain_text = plain_text.upper()
+            semifiltered_plain_text = ''.join(
+                c for c in unicodedata.normalize('NFD', unfiltered_plain_text) if unicodedata.category(c) != 'Mn')
+            filtered_plain_text = ''.join(e for e in semifiltered_plain_text if e.isalpha() or e == ' ')
+            filtered_plain_text = filtered_plain_text.replace(" ", "XSPACEX")
+            if len(filtered_plain_text) % 2 == 1:
+                filtered_plain_text += "Q"
             if alphabet == alphabet_25_cz:
-                filtered_string = filtered_string.replace("W", "V")
+                filtered_plain_text = filtered_plain_text.replace("W", "V")
             else:
-                filtered_string = filtered_string.replace("J", "I")
-            return filtered_string
+                filtered_plain_text = filtered_plain_text.replace("J", "I")
+            return filtered_plain_text
 
         # Key filtering function for 25 characters
         def key_filter_25(key, alphabet):
@@ -196,15 +196,15 @@ class App(ctk.CTk):
             self.textbox7.insert(0, plain_text)
 
         # String filtering function for 64 characters
-        def string_filter_64(string):
-            unfiltered_string = ''.join(
-                c for c in unicodedata.normalize('NFD', string) if unicodedata.category(c) != 'Mn')
-            semifiltered_string = ''.join(
-                e for e in unfiltered_string if e.isalnum() or e == ' ' or e == '.' or e == '?')
-            filtered_string = semifiltered_string.replace(" ", "XSPACEX")
-            if len(filtered_string) % 2 == 1:
-                filtered_string += "Q"
-            return filtered_string
+        def string_filter_64(plain_text):
+            unfiltered_plain_text = ''.join(
+                c for c in unicodedata.normalize('NFD', plain_text) if unicodedata.category(c) != 'Mn')
+            semifiltered_plain_text = ''.join(
+                e for e in unfiltered_plain_text if e.isalnum() or e == ' ' or e == '.' or e == '?')
+            filtered_plain_text = semifiltered_plain_text.replace(" ", "XSPACEX")
+            if len(filtered_plain_text) % 2 == 1:
+                filtered_plain_text += "Q"
+            return filtered_plain_text
 
         # Key filtering function for 64 characters
         def key_filter_64(key):

@@ -116,13 +116,12 @@ class App(ctk.CTk):
             unfiltered_key = key.upper()
             semifiltered_key = ''.join(
                 c for c in unicodedata.normalize('NFD', unfiltered_key) if unicodedata.category(c) != 'Mn')
-            filtered_key = ''.join(e for e in filtered_key if e.isalpha())
+            filtered_key = ''.join(e for e in semifiltered_key if e.isalpha())
             if alphabet == alphabet_25_cz:
                 filtered_key = filtered_key.replace("W", "V")
-                filtered_key = ''.join(sorted(set(semifiltered_key), key=semifiltered_key.index))
             else:
                 filtered_key = filtered_key.replace("J", "I")
-                filtered_key = ''.join(sorted(set(semifiltered_key), key=semifiltered_key.index))
+            filtered_key = ''.join(sorted(set(filtered_key), key=filtered_key.index))
             return filtered_key
 
         # Create matrix function for 25 characters

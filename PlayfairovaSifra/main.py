@@ -116,12 +116,13 @@ class App(ctk.CTk):
             unfiltered_key = key.upper()
             semifiltered_key = ''.join(
                 c for c in unicodedata.normalize('NFD', unfiltered_key) if unicodedata.category(c) != 'Mn')
-            filtered_key = ''.join(sorted(set(semifiltered_key), key=semifiltered_key.index))
             filtered_key = ''.join(e for e in filtered_key if e.isalpha())
             if alphabet == alphabet_25_cz:
                 filtered_key = filtered_key.replace("W", "V")
+                filtered_key = ''.join(sorted(set(semifiltered_key), key=semifiltered_key.index))
             else:
                 filtered_key = filtered_key.replace("J", "I")
+                filtered_key = ''.join(sorted(set(semifiltered_key), key=semifiltered_key.index))
             return filtered_key
 
         # Create matrix function for 25 characters
@@ -209,8 +210,8 @@ class App(ctk.CTk):
         # Key filtering function for 64 characters
         def key_filter_64(key):
             unfiltered_key = ''.join(c for c in unicodedata.normalize('NFD', key) if unicodedata.category(c) != 'Mn')
-            semifiltered_key = "".join(sorted(set(unfiltered_key), key=unfiltered_key.index))
-            filtered_key = ''.join(e for e in semifiltered_key if e.isalpha())
+            semifiltered_key = ''.join(e for e in unfiltered_key if e.isalpha())
+            filtered_key = ''.join(sorted(set(semifiltered_key), key=semifiltered_key.index))
             return filtered_key
 
         # Create matrix function for 64 characters

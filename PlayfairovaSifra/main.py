@@ -146,7 +146,7 @@ class App(ctk.CTk):
             cipher_text = ""
             self.textbox1.delete(0, "end")
             self.textbox1.insert(0, plain_text)
-            filtered_plain_text = string_filter_64(plain_text)
+            filtered_plain_text = plain_text_filter_64(plain_text)
             diagraphs = [filtered_plain_text[i:i + 2] for i in range(0, len(filtered_plain_text), 2)]
             self.textbox2.delete(0, "end")
             self.textbox2.insert(0, diagraphs)
@@ -196,7 +196,7 @@ class App(ctk.CTk):
             self.textbox7.insert(0, plain_text)
 
         # String filtering function for 64 characters
-        def string_filter_64(plain_text):
+        def plain_text_filter_64(plain_text):
             unfiltered_plain_text = ''.join(
                 c for c in unicodedata.normalize('NFD', plain_text) if unicodedata.category(c) != 'Mn')
             semifiltered_plain_text = ''.join(

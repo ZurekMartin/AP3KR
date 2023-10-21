@@ -86,7 +86,7 @@ class App(ctk.CTk):
             self.textbox7.delete(0, "end")
             self.textbox7.insert(0, plain_text)
 
-        # String filtering function for 25 characters
+        # Plain text filtering function for 25 characters
         def plain_text_filter_25(plain_text, alphabet):
             plain_text = plain_text.replace("0", "XZEX")
             plain_text = plain_text.replace("1", "XONX")
@@ -195,7 +195,7 @@ class App(ctk.CTk):
             self.textbox7.delete(0, "end")
             self.textbox7.insert(0, plain_text)
 
-        # String filtering function for 64 characters
+        # Plain text filtering function for 64 characters
         def plain_text_filter_64(plain_text):
             unfiltered_plain_text = ''.join(
                 c for c in unicodedata.normalize('NFD', plain_text) if unicodedata.category(c) != 'Mn')

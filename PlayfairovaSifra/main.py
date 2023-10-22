@@ -348,7 +348,7 @@ class App(ctk.CTk):
         self.textbox3 = ctk.CTkEntry(self)
         self.textbox3.grid(row=5, column=0)
 
-        # Empty label4
+        # Empty label 4
         self.label4 = ctk.CTkLabel(self, text=" ")
         self.label4.grid(row=6, column=0)
 
@@ -376,7 +376,7 @@ class App(ctk.CTk):
         self.segmented_button2.grid(row=7, column=3)
         self.segmented_button2.set("5x5")
 
-        # Empty label6
+        # Empty label 6
         self.label6 = ctk.CTkLabel(self, text=" ")
         self.label6.grid(row=8, column=1)
 
@@ -384,7 +384,7 @@ class App(ctk.CTk):
         self.button3 = ctk.CTkButton(self, text="Clear", command=clear_button)
         self.button3.grid(row=9, column=1)
 
-        # Empty label7
+        # Empty label 7
         self.label7 = ctk.CTkLabel(self, text=" ")
         self.label7.grid(row=8, column=3)
 
@@ -410,7 +410,7 @@ class App(ctk.CTk):
         self.textbox7 = ctk.CTkEntry(self)
         self.textbox7.grid(row=5, column=4)
 
-        # Empty label11
+        # Empty label 11
         self.label11 = ctk.CTkLabel(self, text=" ")
         self.label11.grid(row=6, column=4)
 

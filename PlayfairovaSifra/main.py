@@ -242,12 +242,7 @@ class App(ctk.CTk):
                     encrypt_25(self.textbox7.get(), self.textbox4.get(), alphabet_25_en)
                 else:
                     encrypt_25(self.textbox1.get(), self.textbox4.get(), alphabet_25_en)
-            if self.segmented_button1.get() == "CZ" and self.segmented_button2.get() == "8x8":
-                if len(self.textbox7.get()) > len(self.textbox1.get()):
-                    encrypt_64(self.textbox7.get(), self.textbox4.get(), alphabet_64)
-                else:
-                    encrypt_64(self.textbox1.get(), self.textbox4.get(), alphabet_64)
-            if self.segmented_button1.get() == "EN" and self.segmented_button2.get() == "8x8":
+            if self.segmented_button2.get() == "8x8":
                 if len(self.textbox7.get()) > len(self.textbox1.get()):
                     encrypt_64(self.textbox7.get(), self.textbox4.get(), alphabet_64)
                 else:
@@ -269,14 +264,7 @@ class App(ctk.CTk):
                     self.table.destroy()
                 self.table = CTkTable(master=self, values=matrix)
                 self.table.grid(row=2, column=2, rowspan=5, sticky="ew")
-            if self.segmented_button1.get() == "CZ" and self.segmented_button2.get() == "8x8":
-                filtered_key = key_filter_64(self.textbox4.get())
-                matrix = create_matrix_64(filtered_key, alphabet_64)
-                if hasattr(self, 'table'):
-                    self.table.destroy()
-                self.table = CTkTable(master=self, values=matrix)
-                self.table.grid(row=2, column=2, rowspan=5, sticky="ew")
-            if self.segmented_button1.get() == "EN" and self.segmented_button2.get() == "8x8":
+            if self.segmented_button2.get() == "8x8":
                 filtered_key = key_filter_64(self.textbox4.get())
                 matrix = create_matrix_64(filtered_key, alphabet_64)
                 if hasattr(self, 'table'):
@@ -319,12 +307,7 @@ class App(ctk.CTk):
                     decrypt_25(self.textbox3.get(), self.textbox4.get(), alphabet_25_en)
                 else:
                     decrypt_25(self.textbox5.get(), self.textbox4.get(), alphabet_25_en)
-            if self.segmented_button1.get() == "CZ" and self.segmented_button2.get() == "8x8":
-                if len(self.textbox3.get()) > len(self.textbox5.get()):
-                    decrypt_64(self.textbox3.get(), self.textbox4.get(), alphabet_64)
-                else:
-                    decrypt_64(self.textbox5.get(), self.textbox4.get(), alphabet_64)
-            if self.segmented_button1.get() == "EN" and self.segmented_button2.get() == "8x8":
+            if self.segmented_button2.get() == "8x8":
                 if len(self.textbox3.get()) > len(self.textbox5.get()):
                     decrypt_64(self.textbox3.get(), self.textbox4.get(), alphabet_64)
                 else:

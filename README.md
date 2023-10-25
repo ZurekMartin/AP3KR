@@ -18,9 +18,22 @@ Enhanced playfair cipher with a simple GUI
 ### Functionality
 - GUI
 - supported languages: CZ, EN
-- supports user-specified Key value
+- supports user-specified Key
 - simplified text entry
 - table sizes: Playfair cipher (5x5), Enhanced playfair cipher (8x8)
 - supports input text with lowercase characters, uppercase characters and numbers
 - table generator with inserted Key value
+- formated output
+
+## ADFGVX cipher
+ADFG(V)X cipher with a simple GUI
+
+### Functionality
+- GUI
+- supported languages: CZ, EN
+- supports user-specified table alphabet and Key
+- simplified text entry
+- table sizes: ADFGX (5x5), ADFGVX (6x6)
+- supports input text with uppercase characters and numbers
+- random alphabet generator
 - formated output

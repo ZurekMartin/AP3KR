@@ -37,3 +37,16 @@ ADFG(V)X cipher with a simple GUI
 - supports input text with uppercase characters and numbers
 - random alphabet generator
 - formated output
+
+## RSA
+Simplified RSA algorithm with a simple GUI
+
+### Functionality
+- GUI
+- supported languages: all
+- supports user-specified prime numbers and modulus values
+- simplified text entry
+- key sizes: 1024 bits, 2048 bits, 3072 bits
+- supports input text with lowercase characters, uppercase characters and numbers
+- random prime numbers generator
+- formated output

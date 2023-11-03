@@ -1,6 +1,7 @@
 # Libraries import
 import math
 import random
+import unicodedata
 import tkinter as tk
 import customtkinter as ctk
 
@@ -21,7 +22,8 @@ class App(ctk.CTk):
             n = int(n)
             e = int(e)
             block_size = size // 16
-            binary_plain_text = text_to_binary(plain_text)
+            filtered_plain_text = plain_text_filter(plain_text)
+            binary_plain_text = text_to_binary(filtered_plain_text)
             padding_length = block_size - (len(binary_plain_text) % block_size)
             binary_plain_text += '0' * (padding_length - 8)
             binary_plain_text += format(padding_length, '08b')
@@ -47,6 +49,13 @@ class App(ctk.CTk):
             plain_text = binary_to_text(binary_plain_text)
             binary_plain_text = ' '.join([binary_plain_text[i:i + 8] for i in range(0, len(binary_plain_text), 8)])
             return plain_text, binary_plain_text
+            
+        # Plain text filtering function
+        def plain_text_filter(plain_text):
+            unfiltered_plain_text = ''.join(
+                c for c in unicodedata.normalize('NFD', plain_text) if unicodedata.category(c) != 'Mn')
+            filtered_plain_text = ''.join(c if 0 <= ord(c) <= 255 else '' for c in unfiltered_plain_text)
+            return filtered_plain_text
 
         # Text to binary function
         def text_to_binary(text):

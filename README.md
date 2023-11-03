@@ -21,7 +21,7 @@ Enhanced playfair cipher with a simple GUI
 - supports user-specified Key
 - simplified text entry
 - table sizes: Playfair cipher (5x5), Enhanced playfair cipher (8x8)
-- supports input text with lowercase characters, uppercase characters and numbers
+- supports input text with lowercase characters, uppercase characters, numbers and special characters (".", "?")
 - table generator with inserted Key value
 - formated output
 
@@ -43,10 +43,10 @@ Simplified RSA algorithm with a simple GUI
 
 ### Functionality
 - GUI
-- supported languages: all
+- supported languages: CZ, EN
 - supports user-specified prime numbers and modulus values
 - simplified text entry
 - key sizes: 1024 bits, 2048 bits, 3072 bits
-- supports input text with lowercase characters, uppercase characters and numbers
+- supports input text with lowercase characters, uppercase characters, numbers and special characters
 - random prime numbers generator
 - formated output

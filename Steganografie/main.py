@@ -153,6 +153,8 @@ class App(ctk.CTk):
                 self.textbox3.delete(0, tk.END)
                 self.encoded_image_label.configure(image=None, text="")
                 show_image(encoded_image, self.encoded_image_label)
+                self.empty_label6.configure(text=" ")
+                self.empty_label6.configure(text="Encoded image")
 
         # Clear button
         def clear_button():
@@ -163,6 +165,7 @@ class App(ctk.CTk):
             self.textbox1.set("")
             self.textbox2.delete(0, tk.END)
             self.textbox3.delete(0, tk.END)
+            self.empty_label6.configure(text=" ")
 
         # Save image button
         def save_image_button():

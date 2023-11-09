@@ -47,6 +47,18 @@ Simplified RSA algorithm with a simple GUI
 - supports user-specified prime numbers and modulus values
 - simplified text entry
 - key sizes: 1024 bits, 2048 bits, 3072 bits
-- supports input text with lowercase characters, uppercase characters, numbers and special characters
+- supports input text with lowercase characters, uppercase characters, numbers and special characters (ASCII 0-255)
 - random prime numbers generator
+- formated output
+
+## Steganography
+Steganography (using Least significant bit) with a simple GUI
+
+### Functionality
+- GUI
+- supported languages: CZ, EN
+- simplified text entry
+- image extensions (save mode): .png, .bmp
+- supports input text with lowercase characters, uppercase characters, numbers and special characters (ASCII 0-255)
+- supports exif data
 - formated output

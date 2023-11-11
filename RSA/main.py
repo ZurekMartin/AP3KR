@@ -72,7 +72,7 @@ class App(ctk.CTk):
             p = generate_prime_number(size // 2)
             q = generate_prime_number(size // 2)
             while p == q:
-                q = generate_prime_number(size)
+                q = generate_prime_number(size // 2)
             n = p * q
             phi = (p - 1) * (q - 1)
             e = 65537

@@ -62,3 +62,13 @@ Steganography (using Least significant bit) with a simple GUI
 - supports input text with lowercase characters, uppercase characters, numbers and special characters (ASCII 0-255)
 - supports exif data
 - formated output
+
+## Digital signature
+Digital signature with a simple GUI
+
+### Functionality
+- GUI
+- supported file formats: All
+- simplified file management
+- random prime numbers generator (key values)
+- formated output
